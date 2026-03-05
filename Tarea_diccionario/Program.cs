@@ -28,6 +28,15 @@
                 Console.WriteLine("Nota del estudiante" + Notas["Eduardo Berquefer"]);
             }
 
+            //ejericio4
+            Dictionary<int,string>ciudades = new Dictionary<int,string>();
+            ciudades.Add(901, "Quetzaltenango");
+            ciudades.Add(118, "Guatemala");
+            ciudades.Add(785, "Huehuetenango");
+            ciudades.Add(588, "Jutipa");
+            ciudades.Add(458, "Retalhuleu");
+
+            Console.WriteLine("La ciudad de:_ " + ciudades[901]);
 
         }
     }
