@@ -111,6 +111,18 @@
                 Console.WriteLine("El estudiante no existe");
             }
 
+            //ejercicio10
+            Dictionary<int, string> inventario=new Dictionary<int,string>();
+            inventario.Add(1, "Mouse");
+            inventario.Add(2, "Teclado");
+            inventario.Add(3, "Monitor");
+
+            Console.WriteLine("Ingrese el codigo del producto a eliminar");
+            int codigo=int.Parse(Console.ReadLine());
+
+
+
+
 
         }
     }
