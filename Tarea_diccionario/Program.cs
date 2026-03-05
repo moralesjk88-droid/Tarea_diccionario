@@ -93,6 +93,24 @@
                 Console.WriteLine(item.Key + "-" + item.Value);
             }
 
+            //ejericicio9
+
+            Dictionary<string, double>notas=new Dictionary<string, double>();
+            notas.Add("Maria", 85);
+            notas.Add("Juan", 70);
+            notas.Add("carlos", 95);
+
+            Console.WriteLine("Ingrese el nombre:_ ");
+            string NombreEStudiante=Console.ReadLine();
+            if (notas.ContainsKey(NombreEStudiante))
+            {
+                Console.WriteLine("La nota es: " + notas[NombreEStudiante]);
+            }
+            else
+            {
+                Console.WriteLine("El estudiante no existe");
+            }
+
 
         }
     }
