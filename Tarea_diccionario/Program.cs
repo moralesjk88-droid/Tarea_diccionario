@@ -50,7 +50,18 @@
 
             Console.WriteLine("La contraseña es:_ " + usuario[nombre]);
 
+            //ejercico6
 
+            Dictionary<int,string>Registro=new Dictionary<int,string>();
+            Registro.Add(123, "Marcos");
+            Registro.Add(888, "Estuardo");
+            Registro.Add(985, "Alberto");
+
+            Registro.Remove(985);
+            foreach (var item in Registro)
+            {
+                Console.WriteLine(item.Key + "-" + item.Value);
+            }
 
 
         }
