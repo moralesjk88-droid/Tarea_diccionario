@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-           //ejercicio2
+         /*  //ejercicio2
            Dictionary<int,string>productos= new Dictionary<int,string>();
 
             productos.Add(200521, "Leche");
@@ -61,7 +61,23 @@
             foreach (var item in Registro)
             {
                 Console.WriteLine(item.Key + "-" + item.Value);
+            }*/
+
+            //ejercicio7
+            Dictionary<int,string>Productos=new Dictionary<int,string>();
+
+            int codigo = 888;
+            string produicto = "Telefono";
+
+            if (!Productos.ContainsKey(codigo))
+            {
+                Productos.Add(codigo, produicto);
             }
+            else
+            {
+                Console.WriteLine("El producto ya existe");
+            }
+
 
 
         }
