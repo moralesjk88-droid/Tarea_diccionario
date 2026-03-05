@@ -4,18 +4,17 @@
     {
         static void Main(string[] args)
         {
-            //ejercicio1
-        Dictionary<int,string> Estudiante = new Dictionary<int,string>();
-            Estudiante.Add(202618, "Maria");
-            Estudiante.Add(202620, "Juan");
-            Estudiante.Add(202619, "Carlos");
-            foreach (var item in Estudiante)
+           //ejercicio2
+           Dictionary<int,string>productos= new Dictionary<int,string>();
+
+            productos.Add(200521, "Leche");
+            productos.Add(201015, "Papel");
+            productos.Add(200419, "Envace de agua");
+
+            foreach (var item in productos)
             {
                 Console.WriteLine(item.Key + "-" + item.Value);
             }
-            Console.WriteLine("Nombre del estudiante en especifico:_" + Estudiante[202620]);
-
-
 
 
 
