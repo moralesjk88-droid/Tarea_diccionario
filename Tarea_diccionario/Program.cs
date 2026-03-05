@@ -38,6 +38,21 @@
 
             Console.WriteLine("La ciudad de:_ " + ciudades[901]);
 
+            //ejercicio5
+
+            Dictionary<string, int> usuario = new Dictionary<string, int>();
+
+            usuario.Add("Juan", 1234);
+            usuario.Add("Ingrid", 5678);
+            usuario.Add("Admin", 4321);
+            Console.WriteLine("Ingrese el usuario:_");
+            string nombre = Console.ReadLine();
+
+            Console.WriteLine("La contraseña es:_ " + usuario[nombre]);
+
+
+
+
         }
     }
 }
