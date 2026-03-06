@@ -343,6 +343,61 @@
             }
             while (opcion0 != 0);
 
+            // ejercicio18
+
+            Dictionary<int, string> RegistroUsuario= new Dictionary<int, string>();
+            int opcion1;
+
+
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("1. Registrar usuario");
+                Console.WriteLine("2. Mostrar usuarios");
+                Console.WriteLine("0. Salir");
+                opcion = int.Parse(Console.ReadLine());
+
+                switch (opcion)
+                {
+                    case 1:
+                        Console.WriteLine("Ingrese el ID del usuario:_");
+                        int ID = int.Parse(Console.ReadLine());
+                        if (RegistroUsuario.ContainsKey(ID))
+                        {
+                            Console.Write("EL USUARIO YA EXISTE");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ingrese el nombre del usuario");
+                            string nombre = Console.ReadLine();
+
+                            RegistroUsuario.Add(ID, nombre);
+                            Console.WriteLine("Usuario agregado con exito");
+                        }
+                        Console.ReadKey();
+
+                        break;
+
+                    case 2:
+                        foreach (var item in RegistroUsuario)
+                        {
+                            Console.WriteLine("ID:_" + item.Key + " Nombre del Usuario:_ " + item.Value);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 0:
+                        Console.WriteLine("¡FELIZ DÍA!");
+                        break;
+                    default:
+                        Console.WriteLine("Opcion no valida");
+                        break;
+
+
+                }
+            }
+            while (opcion != 0);
 
         }
     }
