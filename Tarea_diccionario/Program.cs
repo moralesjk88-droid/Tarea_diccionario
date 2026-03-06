@@ -38,7 +38,7 @@
 
             Console.WriteLine("La ciudad de:_ " + ciudades[901]);
 
-            //ejercicio5
+         /*   //ejercicio5
 
             Dictionary<string, int> usuario = new Dictionary<string, int>();
 
@@ -48,7 +48,7 @@
             Console.WriteLine("Ingrese el usuario:_");
             string nombre = Console.ReadLine();
 
-            Console.WriteLine("La contraseña es:_ " + usuario[nombre]);
+            Console.WriteLine("La contraseña es:_ " + usuario[nombre]);*/
 
             //ejercico6
 
@@ -63,7 +63,7 @@
                 Console.WriteLine(item.Key + "-" + item.Value);
             }
 
-            //ejercicio7
+         /*   //ejercicio7
             Dictionary<int,string>Productos=new Dictionary<int,string>();
 
             int codigo = 888;
@@ -76,7 +76,7 @@
             else
             {
                 Console.WriteLine("El producto ya existe");
-            }
+            }*/
 
             //ejercicio8
 
@@ -95,7 +95,7 @@
 
             //ejericicio9
 
-            Dictionary<string, double>notas=new Dictionary<string, double>();
+          /*  Dictionary<string, double>notas=new Dictionary<string, double>();
             notas.Add("Maria", 85);
             notas.Add("Juan", 70);
             notas.Add("carlos", 95);
@@ -109,10 +109,10 @@
             else
             {
                 Console.WriteLine("El estudiante no existe");
-            }
+            }*/
 
             //ejercicio10
-            Dictionary<int, string> inventarioproducto=new Dictionary<int,string>();
+          /*  Dictionary<int, string> inventarioproducto=new Dictionary<int,string>();
             inventarioproducto.Add(1, "Mouse");
             inventarioproducto.Add(2, "Teclado");
             inventarioproducto.Add(3, "Monitor");
@@ -132,7 +132,7 @@
             {
                 Console.WriteLine(item.Key+"_"+item.Value);
                 
-            }
+            }*/
 
             //ejercicio11
 
@@ -149,7 +149,22 @@
                 Console.WriteLine("Lista de Estudiantes:_ "+item.Key + "-" + item.Value);
             }
 
+            //ejercicio12
+            Dictionary<int ,string>ListaProductos=new Dictionary<int ,string>();
 
+            ListaProductos.Add(1, "leche");
+            ListaProductos.Add(2, "huevos");
+            ListaProductos.Add(3, "aceite");
+            ListaProductos.Add(4, "azucar");
+            ListaProductos.Add(5, "arina");
+            ListaProductos.Add(6, "miel");
+            
+            Console.WriteLine("Lista de productos");
+            foreach (var item in ListaProductos)
+            {
+               
+                Console.WriteLine("Codigo:_ "+item.Key+" Nombre producto:_ "+item.Value);
+            }
 
         }
     }
