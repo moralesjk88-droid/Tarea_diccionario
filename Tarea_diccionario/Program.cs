@@ -112,14 +112,27 @@
             }
 
             //ejercicio10
-            Dictionary<int, string> inventario=new Dictionary<int,string>();
-            inventario.Add(1, "Mouse");
-            inventario.Add(2, "Teclado");
-            inventario.Add(3, "Monitor");
+            Dictionary<int, string> inventarioproducto=new Dictionary<int,string>();
+            inventarioproducto.Add(1, "Mouse");
+            inventarioproducto.Add(2, "Teclado");
+            inventarioproducto.Add(3, "Monitor");
 
             Console.WriteLine("Ingrese el codigo del producto a eliminar");
-            int codigo=int.Parse(Console.ReadLine());
-
+            int codigoProducto=int.Parse(Console.ReadLine());
+            if (inventarioproducto.ContainsKey(codigoProducto))
+            {
+                inventarioproducto.Remove(codigoProducto);
+                Console.WriteLine("Eliminado correctamente");
+            }
+            else
+            {
+                Console.WriteLine("Codigo no valido");
+            }
+            foreach (var item in inventarioproducto)
+            {
+                Console.WriteLine(item.Key+"_"+item.Value);
+                
+            }
 
 
 
