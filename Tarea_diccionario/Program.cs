@@ -204,7 +204,22 @@
                  Console.WriteLine("Ciudades:_ "+item.Value);
 
             }
-           
+
+            //ejercicio15
+             Dictionary<int, string> Empleados=new Dictionary<int ,string>();
+            Empleados.Add(125, "Estefany Morales");
+            Empleados.Add(236, "Eduardo Perez");
+            Empleados.Add(698, "Ingrid Mendoza");
+            Empleados.Add(874, "José Arriaga");
+
+            foreach (var item in Empleados)
+            {
+                Console.WriteLine("ID:_" + item.Key + " Nombre:_" + item.Value);
+
+            }
+
+            
+
         }
     }
 }
