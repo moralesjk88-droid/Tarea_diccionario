@@ -225,6 +225,7 @@
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("1. Agregar estudiante");
                 Console.WriteLine("2. Mostrar estudiantes");
                 Console.WriteLine("0. Salir");
@@ -271,6 +272,77 @@
                 }
             }
             while (opcion!=0);
+
+            // ejercicio17
+            Dictionary<int, string> MenuInventario = new Dictionary<int, string>();
+            int opcion0;
+
+
+            do
+            {
+                Console.WriteLine("1. Agregar Producto");
+                Console.WriteLine("2. Mostrar productos");
+                Console.WriteLine("3. Eliminar producto");
+                Console.WriteLine("0. Salir");
+                opcion0 = int.Parse(Console.ReadLine());
+
+                switch (opcion0)
+                {
+                    case 1:
+                        Console.WriteLine("Ingrese el ID del producto:_");
+                        int ID = int.Parse(Console.ReadLine());
+                        if (MenuInventario.ContainsKey(ID))
+                        {
+                            Console.Write("EL PRODUCTO YA EXISTE");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ingrese el nombre del producto:_");
+                            string nombre = Console.ReadLine();
+
+                            MenuInventario.Add(ID, nombre);
+                            Console.WriteLine("Producto agregado con exito");
+                        }
+                        Console.ReadKey();
+
+                        break;
+
+                    case 2:
+                        foreach (var item in MenuInventario)
+                        {
+                            Console.WriteLine("ID :_" + item.Key + " Nombre del producto:_ " + item.Value);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                        case 3:
+                        Console.WriteLine("Ingrese codigo del producto a eliminar:_");
+                        int CodigoEliminar=int.Parse(Console.ReadLine());
+
+                        if (MenuInventario.ContainsKey(CodigoEliminar))
+                        {
+                            MenuInventario.Remove(CodigoEliminar);
+                            Console.WriteLine("Producto elminado");
+                        }
+                        else
+                        {
+                            Console.WriteLine("El producto no existe");
+                        }
+                        Console.ReadKey();
+                        break;
+                    case 0:
+                        Console.WriteLine("¡FELIZ DÍA!");
+                        break;
+                    default:
+                        Console.WriteLine("Opcion no valida");
+                        break;
+
+
+                }
+            }
+            while (opcion0 != 0);
+
 
         }
     }
