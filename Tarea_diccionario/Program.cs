@@ -184,9 +184,27 @@
 
             Console.WriteLine("Promedio de notas:_ " + promedio);
 
+            //ejercicio14
+            Dictionary<int,string>LineaCiudades=new Dictionary<int ,string>();
 
+            LineaCiudades.Add(901, "Quetzaltenango");
+            LineaCiudades.Add(902, "Salcaja");
+            LineaCiudades.Add(903, "Olintepeque");
+            LineaCiudades.Add(906, "Cabrican");
+            LineaCiudades.Add(907, "Cajolá");
 
+            foreach (var item in LineaCiudades)
+            {
+                Console.WriteLine("Linea:_"+item.Key); 
+              
+            }
 
+            foreach (var item in LineaCiudades)
+            {
+                 Console.WriteLine("Ciudades:_ "+item.Value);
+
+            }
+           
         }
     }
 }
