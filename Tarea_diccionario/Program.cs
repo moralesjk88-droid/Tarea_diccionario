@@ -218,7 +218,59 @@
 
             }
 
-            
+            // ejercicio16
+            Dictionary<int,string>MenuEstudiantes=new Dictionary<int ,string>();
+            int opcion;
+
+
+            do
+            {
+                Console.WriteLine("1. Agregar estudiante");
+                Console.WriteLine("2. Mostrar estudiantes");
+                Console.WriteLine("0. Salir");
+                opcion=int.Parse(Console.ReadLine());
+
+                switch (opcion) 
+                {
+                    case 1:
+                        Console.WriteLine("Ingrese el ID del estudiante:_");
+                        int ID=int.Parse(Console.ReadLine());
+                        if (MenuEstudiantes.ContainsKey(ID))
+                        {
+                            Console.Write("EL ESTUDIANTE YA EXISTE");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ingrese el nombre del estudiante");
+                            string nombre=Console.ReadLine();
+
+                            MenuEstudiantes.Add(ID, nombre);
+                            Console.WriteLine("Estudiante agregado con exito");
+                        }
+                        Console.ReadKey();
+
+                        break;
+
+                    case 2:
+                        foreach (var item in MenuEstudiantes)
+                        {
+                            Console.WriteLine("ID del estudiante:_" + item.Key + " Nombre del estudiante:_ " + item.Value);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                        case 0:
+                        Console.WriteLine("¡FELIZ DÍA!");
+                        break;
+                    default:
+                        Console.WriteLine("Opcion no valida");
+                        break;
+                
+                
+                }
+            }
+            while (opcion!=0);
 
         }
     }
