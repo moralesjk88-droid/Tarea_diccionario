@@ -134,6 +134,20 @@
                 
             }
 
+            //ejercicio11
+
+            Dictionary<int,string>ListaEstudiantes=new Dictionary<int,string>();
+
+            ListaEstudiantes.Add(12, "Mario Lopez");
+            ListaEstudiantes.Add(16, "Eduardo Berquefer");
+            ListaEstudiantes.Add(19, "Luisa Lopez");
+            ListaEstudiantes.Add(20, "Oscar Reyes");
+            ListaEstudiantes.Add(18, "Miguel Morales");
+
+            foreach (var item in ListaEstudiantes)
+            {
+                Console.WriteLine("Lista de Estudiantes:_ "+item.Key + "-" + item.Value);
+            }
 
 
 
