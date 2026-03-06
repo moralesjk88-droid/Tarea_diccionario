@@ -166,6 +166,27 @@
                 Console.WriteLine("Codigo:_ "+item.Key+" Nombre producto:_ "+item.Value);
             }
 
+            //ejercicio13
+            Dictionary<int,double>PromedioNotas=new Dictionary<int ,double>();
+
+            PromedioNotas.Add(1, 68.2);
+            PromedioNotas.Add(3, 48.6);
+            PromedioNotas.Add(5,78);
+            PromedioNotas.Add(7, 98);
+            PromedioNotas.Add(9, 88);
+            double promedio,suma=0;
+            foreach (var item in PromedioNotas)
+            {
+                suma=item.Value;
+
+                }
+            promedio = suma / PromedioNotas.Count;
+
+            Console.WriteLine("Promedio de notas:_ " + promedio);
+
+
+
+
         }
     }
 }
