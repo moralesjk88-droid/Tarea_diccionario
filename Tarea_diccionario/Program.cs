@@ -399,6 +399,80 @@
             }
             while (opcion != 0);
 
+
+            // ejercicio19
+            Dictionary<string,double> MenuNotas = new Dictionary<string,double>();
+            int opcion2;
+
+
+            do
+            {
+                Console.WriteLine("1. Agregar estudiante");
+                Console.WriteLine("2. Mostrar estudiante");
+                Console.WriteLine("3. nodificar estudiante");
+                Console.WriteLine("0. Salir");
+                opcion2 = int.Parse(Console.ReadLine());
+
+                switch (opcion2)
+                {
+                    case 1:
+                        Console.WriteLine("Ingrese el nombre del estudiantee:_");
+                        string nombreEstudiante = (Console.ReadLine().ToLower());
+                        if (MenuNotas.ContainsKey(nombreEstudiante))
+                        {
+                            Console.Write("EL ALUMNO YA EXISTE");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ingrese la nota del estudiante del producto:_");
+                            double notaEstudiante = double.Parse(Console.ReadLine());
+
+                            MenuNotas.Add(nombreEstudiante, notaEstudiante);
+                            Console.WriteLine("Nota agregado con exito");
+                        }
+                        Console.ReadKey();
+
+                        break;
+
+                    case 2:
+                        foreach (var item in MenuNotas)
+                        {
+                            Console.WriteLine("Nombre del EStudiante :_" + item.Key + " Nota del estudiante:_ " + item.Value);
+                        }
+                        Console.ReadKey();
+
+                        break;
+                    case 3:
+                        Console.WriteLine("Ingrese El nombre del estudiante a editar:_");
+                        string NombreEditar = (Console.ReadLine().ToLower());
+
+                        if (MenuNotas.ContainsKey(NombreEditar))
+                        {
+                            Console.WriteLine("Ingrese el nuevo nombre:_");
+                            double nuevaNota=double.Parse(Console.ReadLine());
+
+                            MenuNotas[NombreEditar]=nuevaNota;
+                          
+                            Console.WriteLine("Nota actualizada");
+                        }
+                        else
+                        {
+                            Console.WriteLine("El estudiante no existe");
+                        }
+                        Console.ReadKey();
+                        break;
+                    case 0:
+                        Console.WriteLine("¡FELIZ DÍA!");
+                        break;
+                    default:
+                        Console.WriteLine("Opcion no valida");
+                        break;
+
+
+                }
+            }
+            while (opcion2 != 0);
         }
     }
 }
